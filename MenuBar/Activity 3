@@ -1,0 +1,28 @@
+import java.awt.*;
+import jaxax.swing.*;
+
+public class MenuExample {
+	public static void main(String[] args) {
+	JFrame frame = new JFrame("My Frame");
+	frame.setDefaultClosedOperation {
+	JFrame.EXIT_ON_CLOSE;
+	frame.setSize(220, 208);
+	
+		JMEnu fileMenu = new JMEnu("File");
+		fileMenu.add(new JMEnuItem("New"));
+		fileMenu.add(new JMEnuItem("Open"));
+		fileMenu.add(new JMEnuItem("Close"));
+		
+		JMenu editMenu = new JMenu("Edit")); 
+		editMenu.add(new JMenuItem("Undo");
+		editMenu.add(new JMenuItem("Redo"));
+		editMenu.add(new JMenuItem("Cut"));
+		
+		JMenuBar menubar = new JMenuBar();
+		menubar.add(fileMenu);
+		menubar.add(editMenu);
+		
+		frame.set JMenuBar(menubar);
+		frame.setVisible(true);
+	}
+} 
