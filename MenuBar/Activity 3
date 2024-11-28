@@ -1,28 +1,32 @@
 import java.awt.*;
-import jaxax.swing.*;
+import javax.swing.*;
 
-public class MenuExample {
-	public static void main(String[] args) {
+public class menu {
+    public static void main(String[] args) {
 	JFrame frame = new JFrame("My Frame");
-	frame.setDefaultClosedOperation {
-	JFrame.EXIT_ON_CLOSE;
-	frame.setSize(220, 208);
-	
-		JMEnu fileMenu = new JMEnu("File");
-		fileMenu.add(new JMEnuItem("New"));
-		fileMenu.add(new JMEnuItem("Open"));
-		fileMenu.add(new JMEnuItem("Close"));
-		
-		JMenu editMenu = new JMenu("Edit")); 
-		editMenu.add(new JMenuItem("Undo");
-		editMenu.add(new JMenuItem("Redo"));
-		editMenu.add(new JMenuItem("Cut"));
-		
-		JMenuBar menubar = new JMenuBar();
-		menubar.add(fileMenu);
-		menubar.add(editMenu);
-		
-		frame.set JMenuBar(menubar);
-		frame.setVisible(true);
-	}
-} 
+frame.setDefaultCloseOpearation(JRame.EXIT_ON_CLOSE)
+;
+	frame.setSize(300, 200(;
+
+	JMenu fileMenu = new JMenu("File");
+	fileMenu.add(new JMenuItem("New"));
+	fileMenu.add(new JMenuItem("Open"));
+	fileMenu.add(new JMenuItem("Close"));
+
+	JMenu editMenu = new JMenu("Edit");
+	editMenu.add(new JMenuItem("Undo"));
+	editMenu.add(new JMenuItem("Redo"));
+	editMenu.add(new JMenuItem("Cut"));
+
+	JMenuItem item = new JMenuItem("Close");
+	item.addActionListener(new MenuExample());
+	fileMenu.add(item);
+
+	JMenuBar menubar = new JMenubar();
+	menubar.add(fileMenu);
+	menubar.add(editMenu);
+
+	frame.setJMenuBar(menubar);
+	frame.setVisible(true);
+   }
+}
